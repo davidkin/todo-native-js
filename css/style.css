@@ -1,0 +1,49 @@
+.todo {
+    width: 600px;
+    margin: 40px auto;
+    border: 2px solid rgba(0,0,0,.125);
+    padding: 40px;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-name {
+    margin-bottom: 0;
+}
+
+.new-task {
+    width: 415px;
+}
+
+.new-task-block {
+    margin-bottom: 0;
+}
+
+.todo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit-input {
+    margin-right: 15px;
+}
+
+.save-info {
+    margin-right: 7px;
+}
+
+.info-block {
+    display: flex;
+    align-content: center;
+}
+
+.ready {
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
+}
