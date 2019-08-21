@@ -1,8 +1,31 @@
 .todo {
     width: 600px;
     margin: 40px auto;
+}
+
+.todo-content{
+    padding: 15px 40px;
     border: 2px solid rgba(0,0,0,.125);
-    padding: 40px;
+    border-top: 0;
+}
+
+.todo-title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+}
+
+.title-buttons-block a {
+    color: #fff;
+}
+
+.todo-title-block h4 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .list-group-item {
@@ -24,7 +47,7 @@
     margin-bottom: 0;
 }
 
-.todo-header {
+.todo-header-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,4 +102,8 @@
 
 .my-list-item {
     justify-content: space-between;
+}
+
+.button {
+    text-align: center;
 }

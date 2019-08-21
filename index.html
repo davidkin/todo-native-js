@@ -18,35 +18,64 @@
             <div class="row">
 
                 <div class="todo">
-                    <h3>Add task</h3>
 
-                    <div class="todo-header mb-2">
-                        <div class="form-group new-task-block">
-                            <input type="text" class="form-control new-task">
+                    <div class="todo-title-block">
+                        <h4 class="todo-title">For Home</h4>
+
+                        <div class="title-buttons-block">
+                            <a href="javascript:void(0);" class="title-icon-btn edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="title-icon-btn delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
                         </div>
-                        
-                        <button class="btn btn-primary add-task">Add Task</button>
                     </div>
 
-                    <div class="block block-border">
+                    <div class="todo-content">
 
-                        <h3 class="tasks-title">List of tasks</h3>
+                        <div class="todo-header">
+                            <h3>Add task</h3>
+                            
+                            <div class="todo-header-info mb-2">
 
-                        <ul class="list-group mb-2 unfinished-tasks"></ul>
+                                <div class="form-group new-task-block">
+                                    <input type="text" class="form-control new-task">
+                                </div>
+                                
+                                <button class="btn btn-primary add-task">Add Task</button>
+                            </div>
+                        </div>
 
-                    </div>
-                    
-                    <div class="block">
+                        <div class="todo-body">
 
-                        <h3 class="tasks-title">Finished tasks</h3>
-                        
-                        <ul class="list-group mb-2 finished-tasks"></ul>
+                            <div class="block block-border">
+
+                                <h3 class="tasks-title">List of tasks</h3>
+
+                                <ul class="list-group mb-2 unfinished-tasks"></ul>
+
+                            </div>
+                            
+                            <div class="block">
+
+                                <h3 class="tasks-title">Finished tasks</h3>
+                                
+                                <ul class="list-group mb-2 finished-tasks"></ul>
+
+                            </div>
+                        </div>
 
                     </div>
 
                 </div>
 
+                
             </div>
+        </div>
+
+        <div class="button">
+            <button class="btn btn-outline-primary">Add Project</button>
         </div>
 
     </div>
