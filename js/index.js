@@ -11,6 +11,7 @@ let taskList = null;
 let finishedTasksList = null;
 
 let editMode = false;
+let markedTask = false;
 
 // ------------------ Create Project ------------------
 
@@ -111,6 +112,9 @@ function createNewTask(taskName) {
         </div>
 
         <div class="buttons-block">
+            <a href="javascript:void(0);" class="icon-btn important">
+                <i class="fas fa-exclamation"></i>
+            </a>
             <a href="javascript:void(0);" class="icon-btn edit">
                 <i class="fas fa-edit"></i>
             </a>
@@ -130,7 +134,7 @@ function addTask() {
     const task = createNewTask(inputAddTask.value);
     taskList.appendChild(task);
 
-    bindTasksEvent(task, finishTask)
+    bindEvents(task, finishTask)
     
     inputAddTask.value = '';
 }
@@ -175,12 +179,28 @@ function deleteTask() {
     taskList.removeChild(task);
 }
 
+function markTask() {
+    markedTask = !markedTask;
+
+    const btnBlock = this.parentNode;
+    const task = btnBlock.parentNode;
+    const checkboxBlock = task.querySelector('.checkbox-block');
+
+    if (markedTask) {
+        task.style.borderColor = 'green';
+        checkboxBlock.style.borderRightColor = 'green';
+    } else {
+        task.style.borderColor = 'rgba(0,0,0,.125)';
+        checkboxBlock.style.borderRightColor = 'rgba(0,0,0,.125)';
+    }
+}
+
 function finishTask() {
     const infoBlock = this.parentNode;
     const list = infoBlock.parentNode;
 
     finishedTasksList.appendChild(list);
-    bindTasksEvent(list, unfinishTask);
+    bindEvents(list, unfinishTask);
 }
 
 function unfinishTask() {
@@ -188,15 +208,17 @@ function unfinishTask() {
     const list = infoBlock.parentNode;
 
     taskList.appendChild(list);
-    bindTasksEvent(list, finishTask);
+    bindEvents(list, finishTask);
 }
 
-function bindTasksEvent(task, checkboxEvent) {
+function bindEvents(task, checkboxEvent) {
     const checkbox = task.querySelector('.ready');
     const editButton = task.querySelector('.edit');
     const deleteButton = task.querySelector('.delete');
+    const markButton = task.querySelector('.important'); 
 
     checkbox.onclick = checkboxEvent;
     editButton.onclick = editTask;
+    markButton.onclick = markTask;
     deleteButton.onclick = deleteTask;
 }
