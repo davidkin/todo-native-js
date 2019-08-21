@@ -8,10 +8,11 @@
 .list-group-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 0;
 }
 
 .task-name {
+    display: block;
     margin-bottom: 0;
 }
 
@@ -42,8 +43,40 @@
     align-content: center;
 }
 
-.ready {
-    position: relative;
-    top: 7px;
-    margin-right: 5px;
+.checkbox-block {
+    padding: .75rem 1.25rem;
+    border-right: 2px solid rgba(0,0,0,.125);
+}
+
+.info-block {
+    padding: .75rem 1.25rem;
+    width: 380px;
+}
+
+.buttons-block {
+    padding: .75rem 1.25rem;
+}
+
+.block-border {
+    border-bottom: 2px solid rgba(0,0,0,.125);
+    border-top: 2px solid rgba(0,0,0,.125);
+    margin: 20px 0px;
+    padding: 10px 0;
+}
+
+.default-list {
+    padding: .75rem 1.25rem;
+}
+
+.task-label {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.edit-input {
+    display: none;
+}
+
+.my-list-item {
+    justify-content: space-between;
 }
